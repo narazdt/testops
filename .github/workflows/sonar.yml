@@ -24,9 +24,10 @@ jobs:
 
       - name: Discord Notification
         if: always()
-        uses: appleboy/discord-action@master
+        uses: appleboy/discord-action@v1.1.0
         with:
-          webhook_id: ${{ secrets.DISCORD_WEBHOOK }}
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
           message: |
             🔍 **SonarQube Scan Finalizado!**
             **Repositório:** ${{ github.repository }}
